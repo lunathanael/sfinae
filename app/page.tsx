@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useLayoutEffect, useState, useEffect } from 'react';
+import { useRef, useLayoutEffect, useEffect } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import cpp from 'react-syntax-highlighter/dist/esm/languages/prism/cpp';
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
