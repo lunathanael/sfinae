@@ -45,7 +45,67 @@ html {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideContent {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-33.333333%);
+  }
+}
+
+.animate-slide-content {
+  will-change: transform;
+  animation: slideContent 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  will-change: opacity, transform;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.delay-0 {
+  animation-delay: 0ms;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Vignette for edges */
+.vignette {
+  background: radial-gradient(circle, transparent 50%, rgba(13, 17, 23, 0.8) 120%);
+  pointer-events: none;
 }
