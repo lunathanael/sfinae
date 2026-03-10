@@ -35,9 +35,9 @@ export default function RacerPage() {
                 return canvas;
             })(),
 
-            // This tells Emscripten where to find the .wasm file
+            // This tells Emscripten where to find the .wasm and .data files
             locateFile: (path: string, prefix: string) => {
-                if (path.endsWith('.wasm')) {
+                if (path.endsWith('.wasm') || path.endsWith('.data')) {
                     return '/racer/' + path;
                 }
                 return prefix + path;
@@ -122,23 +122,52 @@ export default function RacerPage() {
 
                             <div className="flex items-center justify-between gap-8">
                                 <span className="text-[#8b949e] font-mono">ACCELERATE</span>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 items-center">
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">W</kbd>
+                                    <span className="text-white/50">/</span>
                                     <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">↑</kbd>
                                 </div>
                             </div>
 
                             <div className="flex items-center justify-between gap-8">
                                 <span className="text-[#8b949e] font-mono">BRAKE / REVERSE</span>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 items-center">
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">S</kbd>
+                                    <span className="text-white/50">/</span>
                                     <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">↓</kbd>
                                 </div>
                             </div>
 
                             <div className="flex items-center justify-between gap-8">
                                 <span className="text-[#8b949e] font-mono">STEER</span>
-                                <div className="flex gap-2">
+                                <div className="flex gap-2 items-center">
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">A</kbd>
+                                    <span className="text-white/50">+</span>
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">D</kbd>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between gap-8">
+                                <span className="text-[#8b949e] font-mono">STEER</span>
+                                <div className="flex gap-2 items-center">
                                     <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">←</kbd>
+                                    <span className="text-white/50">+</span>
                                     <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">→</kbd>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between gap-8">
+                                <span className="text-[#8b949e] font-mono">DEBUG</span>
+                                <div className="flex gap-2">
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">C</kbd>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between gap-8">
+                                <span className="text-[#8b949e] font-mono">MAP</span>
+                                <div className="flex gap-2 items-center">
+                                    <kbd className="px-3 py-1.5 bg-white/10 text-white rounded border border-white/20 font-mono text-sm shadow-[0_2px_0_rgba(255,255,255,0.2)]">M</kbd>
+                                    <span className="text-[#8b949e] font-mono text-xs">(↔ NAVIGATE)</span>
                                 </div>
                             </div>
 
