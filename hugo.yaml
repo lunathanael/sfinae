@@ -1,0 +1,4 @@
+baseURL: https://sfin.ae/
+locale: en-us
+title: sfin.ae
+theme: ["PaperMod"]
