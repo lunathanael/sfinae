@@ -2,3 +2,25 @@ baseURL: https://sfin.ae/
 locale: en-us
 title: sfin.ae
 theme: ["PaperMod"]
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "ML & C++ Blog"
+  author: Nathanael Lu
+  profileMode:
+    enabled: true
+    subtitle: "Hi I'm Nate, this is my ML & C++ Blog."
+    imageUrl: "/pfp.jpg"
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    # buttons:
+    #   - name: Archive
+    #     url: "/archive"
+    #   - name: Github
+    #     url: "https://github.com/"
+
+  socialIcons: # optional
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/lunathanael/"
+    - name: "Github"
+      url: "https://github.com/lunathanael"
