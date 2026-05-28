@@ -3,13 +3,48 @@ locale: en-us
 title: sfin.ae
 theme: ["PaperMod"]
 
+pagination:
+  pagerSize: 5
+
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+menu:
+  main:
+    - name: About
+      url: /
+      weight: 1
+    - name: Posts
+      url: posts
+      weight: 2
+    - name: Search
+      url: search/
+      weight: 3
+    - name: Tags
+      url: tags/
+      weight: 4
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "ML & C++ Blog"
   author: Nathanael Lu
+
+  mainSections: ["posts"]
+  ShowToc: true
+  TocOpen: false
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  editPost:
+    URL: "https://github.com/lunathanael/sfinae/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true
+
   profileMode:
-    enabled: true
-    subtitle: "Hi I'm Nate, this is my ML & C++ Blog."
+    Title: "sfin.ae"
+    subtitle: "Hi I'm Nate, and this is my ML & C++ Blog."
     imageUrl: "/pfp.jpg"
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
@@ -24,3 +59,9 @@ params:
       url: "https://www.linkedin.com/in/lunathanael/"
     - name: "Github"
       url: "https://github.com/lunathanael"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search

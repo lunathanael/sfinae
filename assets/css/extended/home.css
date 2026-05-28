@@ -1,0 +1,11 @@
+.home-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  margin: 1rem 0 2.5rem;
+}
+.home-profile-img { border-radius: 50%; }
+.home-heading { margin: 2rem 0 1rem; }
+.home-allposts { margin-top: 2rem; text-align: center; }

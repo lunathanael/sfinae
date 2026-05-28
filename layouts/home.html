@@ -1,0 +1,32 @@
+{{- define "main" }}
+
+{{- with site.Params.profileMode }}
+<div class="home-profile">
+  {{- with .imageUrl }}
+  <img class="home-profile-img" src="{{ . | absURL }}"
+       width="{{ site.Params.profileMode.imageWidth | default 120 }}"
+       height="{{ site.Params.profileMode.imageHeight | default 120 }}"
+       alt="{{ site.Params.profileMode.imageTitle | default "profile image" }}">
+  {{- end }}
+  <h1>{{ .title | default site.Params.homeInfoParams.Title | default site.Title | markdownify }}</h1>
+  {{- with .subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  {{- partial "social_icons.html" . -}}
+</div>
+{{- end }}
+
+{{- $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+
+{{- with where $posts "Params.featured" true }}
+<h2 class="home-heading">Featured</h2>
+{{- range . }}{{ partial "home_card.html" . }}{{ end }}
+{{- end }}
+
+<h2 class="home-heading">Recent Posts</h2>
+{{- range first 3 $posts }}{{ partial "home_card.html" . }}{{ end }}
+
+<p class="home-allposts">
+  <a href="{{ "posts/" | absURL }}">All Posts »</a>
+  {{- with site.Home.OutputFormats.Get "rss" }} · <a href="{{ .Permalink }}">RSS Feed</a>{{ end }}
+</p>
+
+{{- end }}
