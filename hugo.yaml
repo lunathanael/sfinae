@@ -44,7 +44,7 @@ params:
 
   profileMode:
     Title: "sfin.ae"
-    subtitle: "Hi I'm Nate, and this is my ML & C++ Blog."
+    subtitle: "I'm Nate, I like ML & C++."
     imageUrl: "/pfp.jpg"
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
@@ -55,6 +55,8 @@ params:
     #     url: "https://github.com/"
 
   socialIcons: # optional
+    - name: "RSS"
+      url: "https://sfin.ae/index.xml"
     - name: "LinkedIn"
       url: "https://www.linkedin.com/in/lunathanael/"
     - name: "Github"
