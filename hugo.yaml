@@ -38,7 +38,7 @@ params:
   ShowCodeCopyButtons: true
   ShowPostNavLinks: true
   editPost:
-    URL: "https://github.com/lunathanael/sfinae/content"
+    URL: "https://github.com/lunathanael/sfinae/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true
 
